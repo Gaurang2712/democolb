@@ -1,0 +1,901 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    /* Enhanced Pet Care Gradient Background */
+    background: 
+        radial-gradient(circle at 15% 85%, rgba(255, 182, 193, 0.4) 0%, transparent 45%),
+        radial-gradient(circle at 85% 15%, rgba(135, 206, 235, 0.3) 0%, transparent 45%),
+        radial-gradient(circle at 45% 45%, rgba(255, 218, 185, 0.35) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(221, 160, 221, 0.3) 0%, transparent 45%),
+        linear-gradient(135deg, #667eea 0%, #764ba2 20%, #f093fb 40%, #f5576c 60%, #00c9ff 80%, #92fe9d 100%);
+    background-size: 500% 500%, 400% 400%, 450% 450%, 350% 350%, 300% 300%;
+    animation: petCareGradient 25s ease infinite;
+}
+
+/* Enhanced Pet Care Gradient Animation */
+@keyframes petCareGradient {
+    0% { 
+        background-position: 0% 50%, 100% 0%, 50% 100%, 25% 75%, 0% 50%; 
+    }
+    20% { 
+        background-position: 25% 75%, 75% 25%, 100% 0%, 50% 50%, 25% 25%; 
+    }
+    40% { 
+        background-position: 75% 25%, 0% 75%, 25% 75%, 100% 0%, 50% 75%; 
+    }
+    60% { 
+        background-position: 100% 50%, 50% 100%, 75% 25%, 0% 100%, 75% 25%; 
+    }
+    80% { 
+        background-position: 50% 0%, 100% 50%, 0% 50%, 75% 25%, 100% 50%; 
+    }
+    100% { 
+        background-position: 0% 50%, 100% 0%, 50% 100%, 25% 75%, 0% 50%; 
+    }
+}
+
+/* Floating Paw Prints Animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        /* Detailed Paw Print 1 */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(255,255,255,0.15)'%3E%3Ccircle cx='25' cy='25' r='4'/%3E%3Ccircle cx='35' cy='25' r='4'/%3E%3Ccircle cx='20' cy='35' r='3'/%3E%3Ccircle cx='40' cy='35' r='3'/%3E%3Cellipse cx='30' cy='42' rx='6' ry='9' transform='rotate(0 30 42)'/%3E%3C/g%3E%3C/svg%3E"),
+        /* Detailed Paw Print 2 */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(255,255,255,0.12)'%3E%3Ccircle cx='65' cy='15' r='3.5'/%3E%3Ccircle cx='75' cy='15' r='3.5'/%3E%3Ccircle cx='60' cy='25' r='2.8'/%3E%3Ccircle cx='80' cy='25' r='2.8'/%3E%3Cellipse cx='70' cy='32' rx='5' ry='7' transform='rotate(0 70 32)'/%3E%3C/g%3E%3C/svg%3E"),
+        /* Detailed Paw Print 3 */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(255,255,255,0.18)'%3E%3Ccircle cx='10' cy='65' r='3.2'/%3E%3Ccircle cx='20' cy='65' r='3.2'/%3E%3Ccircle cx='5' cy='75' r='2.5'/%3E%3Ccircle cx='25' cy='75' r='2.5'/%3E%3Cellipse cx='15' cy='82' rx='4.5' ry='6.5' transform='rotate(0 15 82)'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 220px 220px, 180px 180px, 200px 200px;
+    background-position: 12% 25%, 88% 70%, 35% 85%;
+    animation: pawPrintsFloat 30s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes pawPrintsFloat {
+    0% { 
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.4;
+    }
+    25% { 
+        transform: translateY(-25px) rotate(90deg);
+        opacity: 0.7;
+    }
+    50% { 
+        transform: translateY(-15px) rotate(180deg);
+        opacity: 0.5;
+    }
+    75% { 
+        transform: translateY(-35px) rotate(270deg);
+        opacity: 0.8;
+    }
+    100% { 
+        transform: translateY(0px) rotate(360deg);
+        opacity: 0.4;
+    }
+}
+
+/* Enhanced Pet Care Elements - Dogs, Cats, Bones, Fish */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        /* Cute Dog Icon */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(139,69,19,0.25)'%3E%3C!-- Dog head --%3E%3Cellipse cx='50' cy='45' rx='15' ry='12' fill='rgba(160,82,45,0.3)'/%3E%3C!-- Dog ears --%3E%3Cellipse cx='38' cy='35' rx='6' ry='10' fill='rgba(139,69,19,0.35)' transform='rotate(-30 38 35)'/%3E%3Cellipse cx='62' cy='35' rx='6' ry='10' fill='rgba(139,69,19,0.35)' transform='rotate(30 62 35)'/%3E%3C!-- Dog eyes --%3E%3Ccircle cx='45' cy='42' r='2' fill='rgba(0,0,0,0.8)'/%3E%3Ccircle cx='55' cy='42' r='2' fill='rgba(0,0,0,0.8)'/%3E%3C!-- Dog nose --%3E%3Cellipse cx='50' cy='48' rx='2' ry='1.5' fill='rgba(0,0,0,0.9)'/%3E%3C!-- Dog mouth --%3E%3Cpath d='M48,52 Q50,54 52,52' stroke='rgba(0,0,0,0.7)' stroke-width='1' fill='none'/%3E%3C/g%3E%3C/svg%3E"),
+        
+        /* Cute Cat Icon */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(128,128,128,0.25)'%3E%3C!-- Cat head --%3E%3Ccircle cx='30' cy='40' r='12' fill='rgba(169,169,169,0.3)'/%3E%3C!-- Cat ears --%3E%3Cpath d='M20,30 L25,20 L30,30 Z' fill='rgba(128,128,128,0.4)'/%3E%3Cpath d='M30,30 L35,20 L40,30 Z' fill='rgba(128,128,128,0.4)'/%3E%3C!-- Cat eyes --%3E%3Cellipse cx='26' cy='38' rx='1.5' ry='2' fill='rgba(34,139,34,0.8)'/%3E%3Cellipse cx='34' cy='38' rx='1.5' ry='2' fill='rgba(34,139,34,0.8)'/%3E%3C!-- Cat nose --%3E%3Cpath d='M29,42 L30,44 L31,42 Z' fill='rgba(255,182,193,0.8)'/%3E%3C!-- Cat whiskers --%3E%3Cline x1='18' y1='40' x2='25' y2='39' stroke='rgba(0,0,0,0.6)' stroke-width='0.5'/%3E%3Cline x1='35' y1='39' x2='42' y2='40' stroke='rgba(0,0,0,0.6)' stroke-width='0.5'/%3E%3C/g%3E%3C/svg%3E"),
+        
+        /* Dog Bone */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(245,245,220,0.3)'%3E%3C!-- Bone body --%3E%3Crect x='25' y='48' width='50' height='4' rx='2' fill='rgba(245,245,220,0.4)'/%3E%3C!-- Bone ends --%3E%3Ccircle cx='25' cy='46' r='4' fill='rgba(245,245,220,0.35)'/%3E%3Ccircle cx='25' cy='54' r='4' fill='rgba(245,245,220,0.35)'/%3E%3Ccircle cx='75' cy='46' r='4' fill='rgba(245,245,220,0.35)'/%3E%3Ccircle cx='75' cy='54' r='4' fill='rgba(245,245,220,0.35)'/%3E%3C/g%3E%3C/svg%3E"),
+        
+        /* Fish Icon */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(70,130,180,0.3)'%3E%3C!-- Fish body --%3E%3Cellipse cx='60' cy='25' rx='15' ry='8' fill='rgba(100,149,237,0.35)'/%3E%3C!-- Fish tail --%3E%3Cpath d='M45,25 L35,18 L35,32 Z' fill='rgba(70,130,180,0.4)'/%3E%3C!-- Fish eye --%3E%3Ccircle cx='65' cy='23' r='2' fill='rgba(0,0,0,0.7)'/%3E%3C!-- Fish fins --%3E%3Cpath d='M55,30 L50,35 L60,33 Z' fill='rgba(70,130,180,0.25)'/%3E%3Cpath d='M55,20 L50,15 L60,17 Z' fill='rgba(70,130,180,0.25)'/%3E%3C/g%3E%3C/svg%3E"),
+        
+        /* Pet Food Bowl */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(139,69,19,0.25)'%3E%3C!-- Bowl --%3E%3Cellipse cx='80' cy='75' rx='12' ry='4' fill='rgba(160,82,45,0.3)'/%3E%3Cellipse cx='80' cy='72' rx='10' ry='6' fill='rgba(139,69,19,0.2)'/%3E%3C!-- Food kibbles --%3E%3Ccircle cx='76' cy='70' r='1.5' fill='rgba(160,82,45,0.6)'/%3E%3Ccircle cx='80' cy='69' r='1.2' fill='rgba(205,133,63,0.6)'/%3E%3Ccircle cx='84' cy='71' r='1.3' fill='rgba(139,69,19,0.6)'/%3E%3C/g%3E%3C/svg%3E"),
+        
+        /* Pet Toy Ball */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg%3E%3C!-- Ball --%3E%3Ccircle cx='15' cy='80' r='8' fill='rgba(255,69,0,0.3)'/%3E%3C!-- Ball pattern --%3E%3Cpath d='M10,75 Q15,78 20,75' stroke='rgba(255,255,255,0.5)' stroke-width='1' fill='none'/%3E%3Cpath d='M10,85 Q15,82 20,85' stroke='rgba(255,255,255,0.5)' stroke-width='1' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+        
+    background-size: 200px 200px, 160px 160px, 180px 180px, 140px 140px, 220px 220px, 120px 120px;
+    background-position: 20% 30%, 75% 20%, 60% 80%, 85% 60%, 15% 70%, 90% 85%;
+    animation: petElementsFloat 35s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes petElementsFloat {
+    0%, 100% { 
+        transform: translate(0px, 0px) rotate(0deg) scale(1);
+        opacity: 0.4;
+    }
+    16% { 
+        transform: translate(8px, -12px) rotate(30deg) scale(1.05);
+        opacity: 0.6;
+    }
+    33% { 
+        transform: translate(-5px, 8px) rotate(90deg) scale(0.95);
+        opacity: 0.5;
+    }
+    50% { 
+        transform: translate(12px, -5px) rotate(180deg) scale(1.1);
+        opacity: 0.7;
+    }
+    66% { 
+        transform: translate(-8px, 10px) rotate(270deg) scale(0.9);
+        opacity: 0.5;
+    }
+    83% { 
+        transform: translate(5px, -15px) rotate(315deg) scale(1.02);
+        opacity: 0.6;
+    }
+}
+
+/* Additional Pet Care Decorations Layer */
+.pet-decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        /* Veterinary Cross */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(220,20,60,0.2)'%3E%3Crect x='48' y='40' width='4' height='20' fill='rgba(220,20,60,0.25)'/%3E%3Crect x='42' y='46' width='16' height='4' fill='rgba(220,20,60,0.25)'/%3E%3C/g%3E%3C/svg%3E"),
+        
+        /* Pet House */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(139,69,19,0.2)'%3E%3C!-- House base --%3E%3Crect x='35' y='55' width='30' height='20' fill='rgba(160,82,45,0.25)'/%3E%3C!-- House roof --%3E%3Cpath d='M30,55 L50,40 L70,55 Z' fill='rgba(139,69,19,0.3)'/%3E%3C!-- Door --%3E%3Crect x='45' y='62' width='10' height='13' fill='rgba(101,67,33,0.4)' rx='5'/%3E%3C/g%3E%3C/svg%3E"),
+        
+        /* Pet Leash */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg%3E%3C!-- Leash handle --%3E%3Cpath d='M75,15 Q80,10 85,15 Q80,20 75,15' stroke='rgba(0,0,0,0.3)' stroke-width='2' fill='none'/%3E%3C!-- Leash line --%3E%3Cpath d='M77,18 Q70,25 65,35 Q60,45 55,55' stroke='rgba(0,0,0,0.25)' stroke-width='1.5' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+        
+    background-size: 100px 100px, 150px 150px, 120px 120px;
+    background-position: 50% 15%, 25% 50%, 80% 40%;
+    animation: decorationsMove 45s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes decorationsMove {
+    0% { 
+        transform: rotate(0deg) translateX(5px);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: rotate(180deg) translateX(-5px);
+        opacity: 0.5;
+    }
+    100% { 
+        transform: rotate(360deg) translateX(5px);
+        opacity: 0.3;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    width: 100%;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(25px);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+    min-height: 600px;
+    position: relative;
+    z-index: 10;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced Pet-themed Sparkles */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(45deg, 
+        rgba(255, 182, 193, 0.4) 0%,
+        rgba(135, 206, 235, 0.3) 25%, 
+        rgba(255, 218, 185, 0.35) 50%,
+        rgba(221, 160, 221, 0.3) 75%,
+        rgba(255, 182, 193, 0.4) 100%);
+    border-radius: 30px;
+    z-index: -1;
+    animation: borderGlow 5s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { 
+        opacity: 0.6; 
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.02);
+    }
+}
+
+.form-container {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.15) 0%, 
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 182, 193, 0.08) 100%);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.logo i {
+    font-size: 2.8rem;
+    background: linear-gradient(135deg, #ff6b9d, #c44569, #667eea, #764ba2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pawGlow 4s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 15px rgba(255, 107, 157, 0.4));
+}
+
+@keyframes pawGlow {
+    from { 
+        filter: drop-shadow(0 0 15px rgba(255, 107, 157, 0.4));
+        transform: scale(1) rotate(0deg);
+    }
+    to { 
+        filter: drop-shadow(0 0 25px rgba(255, 107, 157, 0.7));
+        transform: scale(1.08) rotate(5deg);
+    }
+}
+
+.logo h1 {
+    font-size: 2.4rem;
+    background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1px;
+}
+
+.form-header h2 {
+    color: #333;
+    font-size: 1.9rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.form-header p {
+    color: #666;
+    font-size: 1.05rem;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+.auth-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container i {
+    position: absolute;
+    left: 22px;
+    color: #999;
+    font-size: 1.2rem;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 22px 22px 22px 60px;
+    border: 2px solid rgba(225, 232, 237, 0.9);
+    border-radius: 18px;
+    font-size: 1.05rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(248, 249, 250, 0.95);
+    backdrop-filter: blur(15px);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #ff6b9d;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 
+        0 0 0 4px rgba(255, 107, 157, 0.12),
+        inset 0 2px 4px rgba(0, 0, 0, 0.02),
+        0 4px 12px rgba(255, 107, 157, 0.15);
+    transform: translateY(-3px);
+}
+
+.input-container input:focus + i,
+.input-container input:focus ~ i {
+    color: #ff6b9d;
+}
+
+.password-toggle {
+    right: 22px !important;
+    left: auto !important;
+    cursor: pointer;
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: #ff6b9d;
+    transform: scale(1.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.remember-me:hover {
+    color: #333;
+}
+
+.remember-me input {
+    display: none;
+}
+
+.checkmark {
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(135deg, #e1e8ed, #f8f9fa);
+    border-radius: 7px;
+    margin-right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.remember-me input:checked + .checkmark {
+    background: linear-gradient(135deg, #ff6b9d, #c44569);
+    color: white;
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+    border-color: #ff6b9d;
+}
+
+.remember-me input:checked + .checkmark:after {
+    content: "\2713";
+    font-size: 15px;
+    font-weight: bold;
+    animation: checkBounce 0.3s ease;
+}
+
+@keyframes checkBounce {
+    0% { transform: scale(0.3); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.forgot-password {
+    color: #ff6b9d;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.forgot-password:hover {
+    color: #c44569;
+    transform: translateY(-1px);
+}
+
+.forgot-password::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b9d, #c44569);
+    transition: width 0.3s ease;
+}
+
+.forgot-password:hover::after {
+    width: 100%;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 22px;
+    background: linear-gradient(135deg, #ff6b9d 0%, #c44569 40%, #667eea 100%);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(255, 107, 157, 0.5);
+    background: linear-gradient(135deg, #ff6b9d 0%, #f093fb 50%, #667eea 100%);
+}
+
+.divider {
+    text-align: center;
+    margin: 35px 0;
+    position: relative;
+    color: #999;
+    font-weight: 500;
+}
+
+.divider:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 107, 157, 0.2) 20%, 
+        rgba(255, 107, 157, 0.4) 50%, 
+        rgba(255, 107, 157, 0.2) 80%, 
+        transparent);
+    z-index: 1;
+}
+
+.divider span {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    padding: 0 30px;
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.social-login {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 18px;
+    border: 2px solid rgba(225, 232, 237, 0.9);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.social-btn.google {
+    color: #db4437;
+}
+
+.social-btn.facebook {
+    color: #4267b2;
+}
+
+.social-btn:hover {
+    border-color: currentColor;
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.form-footer {
+    text-align: center;
+    color: #666;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+.form-footer a {
+    color: #ff6b9d;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.form-footer a:hover {
+    color: #c44569;
+    transform: translateY(-1px);
+}
+
+.form-footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b9d, #c44569);
+    transition: width 0.3s ease;
+}
+
+.form-footer a:hover::after {
+    width: 100%;
+}
+
+.image-container {
+    background: 
+        linear-gradient(135deg, 
+            rgba(255, 107, 157, 0.92), 
+            rgba(196, 69, 105, 0.92), 
+            rgba(102, 126, 234, 0.92),
+            rgba(118, 75, 162, 0.92)
+        ),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cdefs%3E%3Cpattern id='pet-pattern' x='0' y='0' width='200' height='200' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='40' cy='40' r='5' fill='rgba(255,255,255,0.12)'/%3E%3Ccircle cx='50' cy='40' r='5' fill='rgba(255,255,255,0.12)'/%3E%3Ccircle cx='35' cy='50' r='4' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='55' cy='50' r='4' fill='rgba(255,255,255,0.1)'/%3E%3Cellipse cx='45' cy='58' rx='7' ry='10' fill='rgba(255,255,255,0.15)'/%3E%3Cpath d='M150,80 C145,70 135,70 135,80 C135,70 125,70 125,80 C125,90 135,100 150,110 C165,100 175,90 175,80 C175,70 165,70 165,80 C165,70 155,70 150,80 Z' fill='rgba(255,255,255,0.08)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23pet-pattern)'/%3E%3C/svg%3E");
+    background-size: cover, 400px 400px;
+    background-position: center, 25% 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 35% 75%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 75% 35%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    animation: overlayPulse 10s ease-in-out infinite;
+}
+
+@keyframes overlayPulse {
+    0%, 100% { 
+        opacity: 0.6; 
+        transform: scale(1) rotate(0deg); 
+    }
+    33% { 
+        opacity: 0.9; 
+        transform: scale(1.05) rotate(2deg); 
+    }
+    66% { 
+        opacity: 0.7; 
+        transform: scale(0.98) rotate(-1deg); 
+    }
+}
+
+.image-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.image-overlay h3 {
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    animation: titleFloat 6s ease-in-out infinite;
+    letter-spacing: 1px;
+}
+
+@keyframes titleFloat {
+    0%, 100% { 
+        transform: translateY(0px) scale(1); 
+    }
+    33% { 
+        transform: translateY(-10px) scale(1.02); 
+    }
+    66% { 
+        transform: translateY(5px) scale(0.98); 
+    }
+}
+
+.image-overlay p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    opacity: 0.98;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    max-width: 320px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Add pet decorations to body */
+body .pet-decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(220,20,60,0.15)'%3E%3Crect x='48' y='35' width='4' height='20' fill='rgba(220,20,60,0.2)'/%3E%3Crect x='42' y='41' width='16' height='4' fill='rgba(220,20,60,0.2)'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='rgba(139,69,19,0.15)'%3E%3Crect x='60' y='70' width='30' height='20' fill='rgba(160,82,45,0.2)'/%3E%3Cpath d='M55,70 L75,55 L95,70 Z' fill='rgba(139,69,19,0.25)'/%3E%3Crect x='70' y='77' width='10' height='13' fill='rgba(101,67,33,0.3)' rx='5'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg%3E%3Cpath d='M25,25 Q30,20 35,25 Q30,30 25,25' stroke='rgba(0,0,0,0.2)' stroke-width='2' fill='none'/%3E%3Cpath d='M27,28 Q22,35 17,45 Q12,55 7,65' stroke='rgba(0,0,0,0.18)' stroke-width='1.5' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 120px 120px, 180px 180px, 140px 140px;
+    background-position: 45% 20%, 30% 55%, 75% 45%;
+    animation: decorationsMove 50s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+    body {
+        background-size: 450% 450%, 350% 350%, 400% 400%, 300% 300%, 250% 250%;
+    }
+    
+    body::before {
+        background-size: 200px 200px, 160px 160px, 180px 180px;
+    }
+    
+    body::after {
+        background-size: 180px 180px, 140px 140px, 160px 160px, 120px 120px, 200px 200px, 100px 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: 350% 350%, 250% 250%, 300% 300%, 200% 200%, 180% 180%;
+    }
+    
+    body::before {
+        background-size: 160px 160px, 120px 120px, 140px 140px;
+        animation-duration: 25s;
+    }
+    
+    body::after {
+        background-size: 160px 160px, 120px 120px, 140px 140px, 100px 100px, 180px 180px, 80px 80px;
+        animation-duration: 30s;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        margin: 15px;
+        max-width: 450px;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 25px;
+        border-width: 2px;
+    }
+    
+    .image-container {
+        display: none;
+    }
+    
+    .form-container {
+        padding: 45px 35px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 182, 193, 0.08) 100%);
+    }
+    
+    .social-login {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .logo i {
+        font-size: 2.4rem;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .pet-decorations {
+        background-size: 100px 100px, 140px 140px, 110px 110px;
+        animation-duration: 40s;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: 280% 280%, 180% 180%, 230% 230%, 150% 150%, 140% 140%;
+        animation-duration: 20s;
+    }
+    
+    body::before {
+        background-size: 140px 140px, 100px 100px, 120px 120px;
+        animation-duration: 22s;
+    }
+    
+    body::after {
+        background-size: 140px 140px, 100px 100px, 120px 120px, 80px 80px, 160px 160px, 60px 60px;
+        animation-duration: 25s;
+    }
+    
+    .form-container {
+        padding: 35px 25px;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        gap: 18px;
+        align-items: flex-start;
+    }
+    
+    .container {
+        margin: 8px;
+        border-radius: 20px;
+    }
+    
+    .logo i {
+        font-size: 2.2rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn-primary {
+        padding: 20px;
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+    }
+    
+    .input-container input {
+        padding: 20px 20px 20px 55px;
+        font-size: 1rem;
+    }
+    
+    .pet-decorations {
+        background-size: 80px 80px, 120px 120px, 90px 90px;
+        animation-duration: 35s;
+    }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+    body {
+        background-size: 600% 600%, 500% 500%, 550% 550%, 400% 400%, 350% 350%;
+    }
+    
+    body::before {
+        background-size: 280px 280px, 240px 240px, 260px 260px;
+    }
+    
+    body::after {
+        background-size: 260px 260px, 220px 220px, 240px 240px, 180px 180px, 280px 280px, 160px 160px;
+    }
+    
+    .pet-decorations {
+        background-size: 160px 160px, 220px 220px, 180px 180px;
+    }
+}
+
+/* High DPI screens optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .container {
+        backdrop-filter: blur(30px);
+        border: 4px solid rgba(255, 255, 255, 0.35);
+    }
+    
+    .input-container input,
+    .social-btn,
+    .divider span {
+        backdrop-filter: blur(20px);
+    }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    body,
+    body::before,
+    body::after,
+    .logo i,
+    .image-overlay h3,
+    .image-container::before,
+    .container::before,
+    .pet-decorations,
+    .checkmark {
+        animation: none;
+    }
+    
+    .btn-primary,
+    .social-btn,
+    .input-container input,
+    .forgot-password,
+    .form-footer a {
+        transition: none;
+    }
+}
